@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "watch": "nodemon --config ./nodemon.json -e ts,scss,html --exec \"tsc && vite build\"",
     "preview": "vite preview",
     "lint": "stylelint \"src/**/*.scss\"",
-    "fix": "prettier --write ."
+    "fix": "prettier --write .",
+    "w3c": "scripts/w3c.sh",
+    "w3c:watch": "nodemon --exec \"npm run w3c $5\""
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
     "normalize-css": "^2.3.1",
     "postcss": "^8.4.13",
     "postcss-load-config": "^3.1.4",
