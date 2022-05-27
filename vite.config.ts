@@ -1,42 +1,23 @@
 import { resolve } from 'path';
-import type { UserConfig /*ViteDevServer */ } from 'vite';
+import { defineConfig } from 'vite';
 
 const page = (file: string) => resolve(__dirname, 'pages', `${file}.html`);
 
-const config: UserConfig = {
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './'),
-    },
-  },
+export default defineConfig(() => ({
   publicDir: 'pages',
-  plugins: [
-    // {
-    //   name: 'router',
-    //   apply: 'serve',
-    //   configureServer(viteDevServer: ViteDevServer) {
-    //     return () => {
-    //       viteDevServer.middlewares.use(async (req, _, next) => {
-    //         if (req && req.originalUrl && req.originalUrl === '/') {
-    //           req.url = '/index.html';
-    //           req.originalUrl = '/index.html';
-    //         }
-    //
-    //         next();
-    //       });
-    //     };
-    //   },
-    // },
-  ],
   build: {
     minify: true,
+    assetsDir: 'assets',
+    outDir: 'dist',
     rollupOptions: {
-      input: {
-        main: page('index'),
-      },
+      input: [
+        page('index'),
+        page('restaurants/la-palette-du-gout'),
+        page('restaurants/la-note-enchantee'),
+        page('restaurants/a-la-francaise'),
+        page('restaurants/le-delice-des-sens'),
+      ],
     },
     target: 'ESNEXT',
   },
-};
-
-export default config;
+}));
