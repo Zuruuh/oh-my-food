@@ -2,17 +2,17 @@
 <html lang='fr'>
 <head>
   <meta charset='UTF-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/src/styles/main.scss" />
-  <title>Oh My Food</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='stylesheet' type='text/css' href='/src/styles/main.scss' />
+  <title>Le délice des sens | Oh My Food</title>
 </head>
 <body>
 <nav class='layout'>
-  <a href='../'><i class='fa-solid fa-arrow-left'></i></a>
+  <a href='../index.html'><i class='fa-solid fa-arrow-left'></i></a>
   <h1>OhMyFood</h1> <!-- css text lowercase -->
 </nav>
-<main>
-  <img src='/src/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg' alt='Le délice des sens'/>
+<main id='restaurant'>
+  <img src='/src/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg' alt='Le délice des sens' />
   <section class='menu'>
     <header>
       <h3>Le délice des sens</h3>
@@ -22,23 +22,23 @@
       </div>
     </header>
     <section>
-      <span>Entrées</span> <!-- css text uppercase -->
+      <span>Entrées</span>
       <ul class='menu'>
-        <li>
+        <li class='card-list-item'>
           <div class='menu-info'>
             <h5>Tartare de thon</h5>
             <span>Assaisonné au yuzu</span>
           </div>
           <span>25€</span>
         </li>
-        <li>
+        <li class='card-list-item'>
           <div class='menu-info'>
             <h5>Bouchée de homard croustillant </h5>
             <span>Et sa farandole de petits légumes</span>
           </div>
           <span>35€</span>
         </li>
-        <li>
+        <li class='card-list-item'>
           <div class='menu-info'>
             <h5>Velouté de cèpes</h5>
             <span>Aux truffes</span>
@@ -47,79 +47,79 @@
         </li>
       </ul>
     </section>
-  </section>
-  <section>
-    <span>Plats</span> <!-- css text uppercase -->
-    <ul class='menu'>
-      <li>
-        <div class='menu-info'>
-          <h5>Poulet rôti aux herbes de Provence</h5>
-          <span>Et sa crème de truffe</span>
-        </div>
-        <span>40€</span>
-      </li>
-      <li>
-        <div class='menu-info'>
-          <h5>Langouste rôtie</h5>
-          <span>Et ses légumes de saison</span>
-        </div>
-        <span>35€</span>
-      </li>
-      <li>
-        <div class='menu-info'>
-          <h5>Côte de boeuf Angus </h5>
-          <span>Et sa purée de panais</span>
-        </div>
-        <span>44€</span>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <span>Desserts</span> <!-- css text uppercase -->
-    <ul class='menu'>
-      <li>
-        <div class='menu-info'>
-          <h5>Farandole de desserts</h5>
-          <span>Du chef</span>
-        </div>
-        <span>18€</span>
-      </li>
-      <li>
-        <div class='menu-info'>
-          <h5>Crème brulée</h5>
-          <span>Revisitée</span>
-        </div>
-        <span>22€</span>
-      </li>
-      <li>
-        <div class='menu-info'>
-          <h5>Tiramisu</h5>
-          <span>À la noisette</span>
-        </div>
-        <span>23€</span>
-      </li>
-    </ul>
+    <section>
+      <span>Plats</span>
+      <ul class='menu'>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Poulet rôti aux herbes de Provence</h5>
+            <span>Et sa crème de truffe</span>
+          </div>
+          <span>40€</span>
+        </li>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Langouste rôtie</h5>
+            <span>Et ses légumes de saison</span>
+          </div>
+          <span>35€</span>
+        </li>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Côte de boeuf Angus </h5>
+            <span>Et sa purée de panais</span>
+          </div>
+          <span>44€</span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <span>Desserts</span>
+      <ul class='menu'>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Farandole de desserts</h5>
+            <span>Du chef</span>
+          </div>
+          <span>18€</span>
+        </li>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Crème brulée</h5>
+            <span>Revisitée</span>
+          </div>
+          <span>22€</span>
+        </li>
+        <li class='card-list-item'>
+          <div class='menu-info'>
+            <h5>Tiramisu</h5>
+            <span>À la noisette</span>
+          </div>
+          <span>23€</span>
+        </li>
+      </ul>
+    </section>
   </section>
   <button class='button order'>
     Commander
   </button>
-  <footer class='layout'>
-    <h3>ohmyfood</h3>
-    <ul>
-      <li>
-        <a href='#'>Proposer un restaurant</a>
-      </li>
-      <li>
-        <a href='#'>Devenir partenaire</a>
-      </li>
-      <li>
-        <a href='#'>Mentions légales</a>
-      </li>
-      <li>
-        <a href='mailto:ziadi.mail.pro@gmail.com'>Contact</a>
-      </li>
-    </ul>
-  </footer>
 </main>
+<footer class='layout'>
+  <h3>ohmyfood</h3>
+  <ul>
+    <li>
+      <a href='#'>Proposer un restaurant</a>
+    </li>
+    <li>
+      <a href='#'>Devenir partenaire</a>
+    </li>
+    <li>
+      <a href='#'>Mentions légales</a>
+    </li>
+    <li>
+      <a href='mailto:ziadi.mail.pro@gmail.com'>Contact</a>
+    </li>
+  </ul>
+</footer>
 </body>
 </html>
