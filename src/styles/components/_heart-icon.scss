@@ -1,0 +1,47 @@
+.heart-icon {
+  & > input[type='checkbox'] {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+
+    &:checked + i::before {
+      font-weight: 900;
+      color: transparent;
+      background-image: linear-gradient(45deg, $clr-secondary 0%, $clr-primary 81%);
+      animation-name: heart;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    &:hover + i {
+      transform: scale(1.1);
+      transition: transform 0.05s ease-in;
+    }
+  }
+
+  & > i::before {
+    content: '\f004';
+    width: 24px;
+    height: 24px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    pointer-events: none;
+    user-select: none;
+    background-color: transparent;
+  }
+}
+
+@keyframes heart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

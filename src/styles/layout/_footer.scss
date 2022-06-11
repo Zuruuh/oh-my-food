@@ -1,0 +1,39 @@
+footer.layout {
+  background-color: $bg-dark-primary;
+  padding: 2.5rem;
+
+  * {
+    color: $clr-text-dark;
+  }
+
+  h3 {
+    font-family: 'Shrikhand', sans-serif;
+    text-transform: lowercase;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    li {
+      &:nth-child(1)::before,
+      &:nth-child(2)::before {
+        width: 1rem;
+        height: 1rem;
+        font-size: 1rem;
+        font-weight: 900;
+        pointer-events: none;
+        user-select: none;
+        background-color: transparent;
+        font-family: 'Font Awesome 6 Free', sans-serif;
+      }
+
+      &:nth-child(1)::before {
+        content: '\f2e7'; // https://fontawesome.com/icons/utensils?s=solid
+      }
+
+      &:nth-child(2)::before {
+        content: ''; // https://fontawesome.com/icons/handshake-angle?s=solid
+      }
+    }
+  }
+}

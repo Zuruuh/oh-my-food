@@ -1,0 +1,23 @@
+nav.layout {
+  height: 6.3rem;
+  background-color: $bg-light-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  h1 {
+    color: $clr-text-light-primary;
+    font-family: Shrikhand, sans-serif;
+    text-transform: lowercase;
+    font-size: 2.2rem;
+  }
+
+  a {
+    position: absolute;
+    left: 2.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+  }
+}
