@@ -1,23 +1,18 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-
-const page = (file: string) => resolve(__dirname, 'pages', `${file}.html`);
+import glob from 'fast-glob';
 
 export default defineConfig(() => ({
-  publicDir: 'pages',
   build: {
     minify: true,
     assetsDir: 'assets',
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: [
-        page('index'),
-        page('restaurants/la-palette-du-gout'),
-        page('restaurants/la-note-enchantee'),
-        page('restaurants/a-la-francaise'),
-        page('restaurants/le-delice-des-sens'),
-      ],
+      input: glob
+        .sync(['./pages/**/*.html', '!dist'])
+        .map((entry: string) => resolve(__dirname, entry)),
     },
-    target: 'ESNEXT',
+    target: 'modules',
   },
 }));

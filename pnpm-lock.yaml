@@ -10,6 +10,7 @@ specifiers:
   eslint: ^8.15.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.0.0
+  fast-glob: ^3.2.11
   nodemon: ^2.0.16
   normalize-css: ^2.3.1
   postcss: ^8.4.13
@@ -38,6 +39,7 @@ devDependencies:
   eslint: registry.npmjs.org/eslint/8.15.0
   eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/8.5.0_eslint@8.15.0
   eslint-plugin-prettier: registry.npmjs.org/eslint-plugin-prettier/4.0.0_iqftbjqlxzn3ny5nablrkczhqi
+  fast-glob: registry.npmjs.org/fast-glob/3.2.11
   nodemon: registry.npmjs.org/nodemon/2.0.16
   normalize-css: registry.npmjs.org/normalize-css/2.3.1
   postcss: registry.npmjs.org/postcss/8.4.13
@@ -1933,7 +1935,7 @@ packages:
     dev: true
 
   registry.npmjs.org/is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz}
     name: is-extglob
     version: 2.1.1
     engines: {node: '>=0.10.0'}
