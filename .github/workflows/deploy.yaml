@@ -18,7 +18,12 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm run prod /oh-my-food/
-          ./scripts/prod
+
+      - name: Additional post-build scripts 🤖
+        run: |
+          ./scripts/prod.sh
+          ./scripts/fs-router.sh
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
