@@ -4,11 +4,10 @@ import { defineConfig } from 'vite';
 const page = (file: string) => resolve(__dirname, 'pages', `${file}.html`);
 
 export default defineConfig(() => ({
-  publicDir: 'pages',
   build: {
-    minify: true,
-    assetsDir: 'assets',
+    minify: 'esbuild',
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: [
         page('index'),
