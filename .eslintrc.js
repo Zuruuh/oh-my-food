@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -16,5 +17,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
+    '@typescript-eslint/no-var-requires': ['off'],
+    '@typescript-eslint/triple-slash-reference': ['off'],
   },
 };
