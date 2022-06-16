@@ -4,7 +4,7 @@ import glob from 'fast-glob';
 
 export default defineConfig(() => ({
   build: {
-    minify: true,
+    minify: 'esbuild',
     assetsDir: 'assets',
     outDir: 'dist',
     emptyOutDir: true,
