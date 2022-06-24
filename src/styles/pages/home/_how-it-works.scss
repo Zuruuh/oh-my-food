@@ -1,7 +1,7 @@
 #how-it-works {
   height: auto;
   background-color: $bg-light-primary;
-  padding: 5.3rem 1.8rem 3.8rem 1.8rem;
+  padding: 5.3rem 1.8rem 3.8rem;
   display: flex;
   flex-direction: column;
 
@@ -33,7 +33,7 @@
       i {
         color: $clr-icons-dark;
         margin-left: 2rem;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       &:hover {

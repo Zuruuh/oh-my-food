@@ -23,7 +23,7 @@ main#restaurant {
       bottom: 100%;
 
       h3 {
-        font-family: 'Shrikhand', sans-serif;
+        font-family: Shrikhand, sans-serif;
         font-size: 2rem;
       }
     }
@@ -40,17 +40,17 @@ main#restaurant {
         &::after {
           content: '';
           position: absolute;
-          bottom: -.25rem;
+          bottom: -0.25rem;
           left: 0;
           display: block;
           width: 2.5rem;
-          height: .2rem;
+          height: 0.2rem;
           background-color: $clr-success;
         }
       }
 
       ul {
-        margin-top: .75rem;
+        margin-top: 0.75rem;
 
         li {
           width: 100%;
