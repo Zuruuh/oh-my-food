@@ -20,6 +20,7 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm run prod /oh-my-food/
+          touch .nojekyll dist/.nojekyll
 
       - name: Additional post-build scripts 🤖
         run: |

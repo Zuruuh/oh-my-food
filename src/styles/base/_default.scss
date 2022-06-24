@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+b {
+  font-family: Roboto, sans-serif;
+}
+
+a,
+a:visited {
+  color: $clr-text-light-primary;
+}
