@@ -1,0 +1,60 @@
+#how-it-works {
+  height: auto;
+  background-color: $bg-light-primary;
+  padding: 5.3rem 1.8rem 3.8rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+
+  b {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    counter-reset: how-it-works;
+
+    li {
+      background-color: $bg-light-secondary;
+      counter-increment: how-it-works;
+      list-style-type: decimal;
+      position: relative;
+      display: flex;
+      padding: 1.5rem 1.5rem 1.5rem 0;
+      margin-bottom: 2.5rem;
+
+      span {
+        font-size: 1.5rem;
+      }
+
+      i {
+        color: $clr-icons-dark;
+        margin-left: 2rem;
+        margin-right: .5rem;
+      }
+
+      &:hover {
+        background-color: $clr-important;
+
+        & > i {
+          color: $clr-primary;
+        }
+      }
+
+      &::before {
+        content: counter(how-it-works);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-35%, -50%);
+        background-color: $clr-primary;
+        color: $clr-text-dark;
+        padding: 0.5rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

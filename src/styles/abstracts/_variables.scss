@@ -12,8 +12,15 @@ $bg-light-tertiary: #eaeaea;
 $bg-dark-primary: #353535;
 
 // Additional colors
-$color-success: #99e2d0;
+$clr-success: #99e2d0;
+$clr-text-success: #159475;
 
 // Mode-Dependant text color
-$clr-text-light: #000;
+$clr-text-light-primary: #000;
+$clr-text-light-secondary: #353535;
+//
 $clr-text-dark: #fff;
+
+// Extra colors
+$clr-icons-dark: #7e7e7e;
+$clr-important: #f5edff;
