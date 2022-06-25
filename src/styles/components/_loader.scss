@@ -1,0 +1,78 @@
+body.with-spinner-loader {
+  overflow: hidden;
+  animation-name: scroll-lock;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
+  &::before {
+    content: 'OhMyFood';
+    font-family: Shrikhand, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: $clr-primary;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: $bg-light-primary;
+    animation: hide 3s ease forwards;
+  }
+
+  &::after {
+    content: '\f110'; // https://fontawesome.com/icons/spinner?s=solid
+    font-weight: 800;
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    color: $clr-secondary;
+    font-size: 3.5rem;
+    position: absolute;
+    top: calc(50vh - (3.5rem / 2));
+    left: calc(50vw - (3.5rem / 2));
+    z-index: 9999;
+    display: block;
+    animation: 2s linear 0s infinite normal none running spin,
+      3s ease 0s forwards hide;
+  }
+}
+
+@keyframes scroll-lock {
+  from {
+    overflow: hidden;
+  }
+
+  99% {
+    overflow: hidden;
+  }
+
+  to {
+    overflow: scroll;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
