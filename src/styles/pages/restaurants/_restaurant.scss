@@ -59,9 +59,12 @@ main#restaurant {
           justify-content: space-between;
           align-items: flex-end;
           padding: 1.25rem 1rem;
+          margin-top: 0.5rem;
 
           h5,
           span {
+            display: inline-block;
+            max-width: 30rem;
             text-overflow: ellipsis;
           }
 

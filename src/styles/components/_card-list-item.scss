@@ -1,5 +1,54 @@
 .card-list-item {
+  position: relative;
   border-radius: 1.1rem;
   box-shadow: rgb(0 0 0 / 10%) 0 5px 6px 1px;
   height: auto;
+  overflow: hidden;
+}
+
+ul.menu .card-list-item {
+  //counter-reset: menu-item;
+  animation-name: fade-in-from-bottom;
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards; // https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
+
+  &::before {
+    content: '\f058'; // https://fontawesome.com/icons/circle-check?s=solid
+    font-family: 'Font Awesome 6 Free', sans-serif;
+    font-weight: 800;
+    position: absolute;
+    color: $clr-text-dark;
+    font-size: 2rem;
+    z-index: 2;
+    right: calc(15% / 2);
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  &::after {
+    content: '';
+    position: relative;
+    background-color: $clr-tertiary;
+    width: 15%;
+    height: calc(100% + 1.25rem * 2);
+    top: calc(0% + 1.25rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: calc(0px - 1rem);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+
+    }
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
 }
