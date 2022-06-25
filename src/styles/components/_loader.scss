@@ -6,7 +6,7 @@ body.with-spinner-loader {
 
   &::before {
     content: 'OhMyFood';
-    font-family: 'Shrikhand', sans-serif;
+    font-family: Shrikhand, sans-serif;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -35,7 +35,7 @@ body.with-spinner-loader {
     z-index: 9999;
     display: block;
     animation: 2s linear 0s infinite normal none running spin,
-    3s ease 0s forwards hide;
+      3s ease 0s forwards hide;
   }
 }
 
@@ -57,6 +57,7 @@ body.with-spinner-loader {
   from {
     opacity: 1;
   }
+
   65% {
     opacity: 1;
   }
