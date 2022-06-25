@@ -8,13 +8,17 @@ function run() {
     files=$(/bin/ls -1 -- "./$1")
 
     for file in $files; do
-        if [ "$file" = "index.html" ]; then
+        local path="$1/$file"
+
+        if [ -d "$path" ]; then
+            run "$path"
             continue
         fi
 
-        local path="$1/$file"
-        if [ -d "$path" ]; then
-            run "$path"
+        sed -i "s/index.html//g" "$path" >> /dev/null
+        sed -i "s/.html//g" "$path" >> /dev/null
+
+        if [ "$file" = "index.html" ]; then
             continue
         fi
 
@@ -33,8 +37,8 @@ function run() {
         fi
 
         mv "$path" "$dir"/index.html
-        sed -i "s/index.html//g" "$dir"/index.html >> /dev/null
-        sed -i "s/.html//g" "$dir"/index.html >> /dev/null
+#        sed -i "s/index.html//g" "$dir"/index.html >> /dev/null
+#        sed -i "s/.html//g" "$dir"/index.html >> /dev/null
     done
 }
 
