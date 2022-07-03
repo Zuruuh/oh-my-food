@@ -5,6 +5,7 @@
   h2 {
     font-weight: 800;
     font-size: 1.6rem;
+    padding-bottom: 2rem;
   }
 
   .restaurants {
@@ -12,5 +13,13 @@
     grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
+  }
+}
+
+@include tablet {
+  #restaurants {
+    .restaurants {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

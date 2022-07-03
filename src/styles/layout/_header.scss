@@ -24,7 +24,7 @@ header.layout {
     height: 27rem;
     background-color: $bg-light-secondary;
     align-items: center;
-    padding: 4.5rem 6rem;
+    padding: 4.5rem 4rem;
     justify-content: space-between;
 
     * {
@@ -32,13 +32,17 @@ header.layout {
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 2.3rem;
       font-weight: 800;
     }
 
     h4 {
       font-weight: 300;
-      font-size: 1.2rem;
+      font-size: 1.7rem;
+    }
+
+    a.button {
+      font-size: 1.4rem;
     }
   }
 }

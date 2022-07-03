@@ -32,6 +32,7 @@
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     & > .card-text {
       display: flex;
@@ -43,6 +44,12 @@
         font-size: 1.2rem;
         margin-top: 0.2rem;
       }
+    }
+
+    & > .card-rating {
+      right: 0.5rem;
+      height: 2.4rem;
+      width: 2.4rem;
     }
   }
 }

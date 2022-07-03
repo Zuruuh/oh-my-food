@@ -1,15 +1,30 @@
 main#restaurant {
   width: 100vw;
   padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $bg-light-secondary;
 
   & > img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
+    max-height: 25vh;
   }
 
   section.menu {
     position: relative;
+    background-color: $bg-light-primary;
+    max-width: 70rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
 
     header {
       background-color: $bg-light-primary;
@@ -53,19 +68,36 @@ main#restaurant {
         margin-top: 0.75rem;
 
         li {
-          width: 100%;
+          opacity: 0;
+          transform: translateY(25%);
+          animation-delay: calc(var(--delay-index) * 0.25s);
+          animation-name: fade-in-from-bottom;
+          animation-duration: 1.25s;
+          animation-fill-mode: forwards; // https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
           height: 7rem;
           display: flex;
-          justify-content: space-between;
           align-items: flex-end;
           padding: 1.25rem 1rem;
           margin-top: 0.5rem;
 
-          h5,
-          span {
-            display: inline-block;
-            max-width: 30rem;
+          .menu-info {
+            flex-grow: 1;
+            overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
+
+            * {
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+          & > span {
+            padding-left: 1rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
           }
 
           & > div {
@@ -79,10 +111,50 @@ main#restaurant {
               font-size: 1.5rem;
               font-weight: 800;
             }
+
+            span {
+              font-size: 1.2rem;
+            }
           }
 
-          & span {
-            font-size: 1.2rem;
+          &::before {
+            content: '\f058'; // https://fontawesome.com/icons/circle-check?s=solid
+            font-family: 'Font Awesome 6 Free', sans-serif;
+            font-weight: 800;
+            position: absolute;
+            color: $clr-text-dark;
+            font-size: 2.5rem;
+            z-index: 2;
+            right: -1rem;
+            top: 50%;
+            transform: translateY(-50%) translateX(50%) rotate(90deg);
+            transition: transform 0.7s ease-in, right 0.7s ease-out;
+          }
+
+          &::after {
+            content: '';
+            position: relative;
+            background-color: $clr-tertiary;
+            width: 0;
+            height: calc(100% + 1.25rem * 2);
+            top: calc(0% + 1.25rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: -1rem;
+            flex-shrink: 0;
+            transition: width 0.7s ease-out;
+          }
+
+          &:hover {
+            &::after {
+              width: 7rem;
+            }
+
+            &::before {
+              right: calc(7rem / 2);
+              transform: translateY(-50%) translateX(50%) rotate(0deg);
+            }
           }
         }
       }
@@ -90,8 +162,30 @@ main#restaurant {
   }
 
   button.button.order {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    font-family: Roboto, sans-serif;
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@include tablet {
+  main#restaurant {
+    & > img {
+      object-fit: cover;
+      height: 25rem;
+    }
+  }
+}
+
+@include desktop {
+  main#restaurant {
+    section.menu header {
+      width: 100%;
+    }
   }
 }

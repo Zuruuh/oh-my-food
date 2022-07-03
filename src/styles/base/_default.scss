@@ -1,5 +1,7 @@
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -23,4 +25,5 @@ a:visited {
 
 body {
   position: relative;
+  padding: 0;
 }

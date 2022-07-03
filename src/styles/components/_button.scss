@@ -1,6 +1,6 @@
 a.button,
 button.button {
-  background: rgb(255 121 218);
+  background: $clr-secondary; // In case browser does not support linear-gradient (https://caniuse.com/css-gradients)
   background: linear-gradient(169deg, $clr-secondary 16%, $clr-primary 82%);
   color: $clr-text-dark;
   text-decoration: none;
@@ -8,4 +8,21 @@ button.button {
   border-radius: 2.2rem;
   box-shadow: 0 5px 20px -10px #000;
   border: 0;
+  transition: filter ease-out 0.1s, scale ease-in 0.05s;
+
+  &:hover {
+    filter: brightness(105%);
+    box-shadow: 0 5px 22.5px -10px #000;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@include tablet {
+  a.button,
+  button.button {
+    font-size: 2rem;
+  }
 }
