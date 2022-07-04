@@ -1,0 +1,39 @@
+@include desktop {
+  section.hero {
+    display: flex;
+    background-color: $bg-light-secondary;
+    justify-content: center;
+
+    header.layout {
+      width: 60%;
+      max-width: 100rem;
+
+      .location {
+        display: none;
+      }
+
+      .hero {
+        height: 100%;
+        align-items: flex-start;
+
+        * {
+          text-align: start;
+        }
+
+        h1 {
+          font-size: 3.8rem;
+        }
+
+        h4 {
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    section#how-it-works {
+      background-color: $bg-light-secondary;
+      max-width: 100rem;
+      width: 40%;
+    }
+  }
+}

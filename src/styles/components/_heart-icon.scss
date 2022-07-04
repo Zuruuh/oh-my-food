@@ -7,14 +7,14 @@
     height: 24px;
     opacity: 0;
 
-    & > i::before {
+    & + i::before {
       content: '\f004';
-      width: 24px;
-      height: 24px;
+      width: 2.4rem;
+      height: 2.4rem;
       background-clip: text;
       font-family: 'Font Awesome 6 Free', sans-serif;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 2.4rem;
       pointer-events: none;
       user-select: none;
       background-color: transparent;

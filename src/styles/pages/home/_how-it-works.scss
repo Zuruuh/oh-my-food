@@ -1,9 +1,12 @@
 #how-it-works {
   height: auto;
   background-color: $bg-light-primary;
-  padding: 5.3rem 1.8rem 3.8rem;
+  padding: 4rem 1.8rem 3.8rem;
   display: flex;
   flex-direction: column;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
 
   b {
     font-size: 1.7rem;
@@ -23,8 +26,11 @@
       list-style-type: decimal;
       position: relative;
       display: flex;
-      padding: 1.5rem 1.5rem 1.5rem 0;
+      padding: 2rem 1.5rem 2rem 0;
       margin-bottom: 2.5rem;
+      overflow: visible;
+      cursor: pointer;
+      transition: background-color ease 0.1s;
 
       span {
         font-size: 1.5rem;
@@ -34,6 +40,7 @@
         color: $clr-icons-dark;
         margin-left: 2rem;
         margin-right: 0.5rem;
+        font-size: 1.5rem;
       }
 
       &:hover {
@@ -52,8 +59,16 @@
         transform: translate(-35%, -50%);
         background-color: $clr-primary;
         color: $clr-text-dark;
-        padding: 0.5rem;
         border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        font-size: 1.2rem;
+      }
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
       }
     }
   }
