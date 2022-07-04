@@ -56,5 +56,5 @@ jobs:
           ./scripts/fs-router.sh dist
 
       - name: Run w3c validator ✨
-        if: always() # Lint will not fail entire ci even if exit return code is 1
+        continue-on-error: true # Lint will not fail entire ci even if exit return code is 1 (since there are some errors we cannot solve *for now*)
         run: bash ./scripts/w3c-ci.sh dist

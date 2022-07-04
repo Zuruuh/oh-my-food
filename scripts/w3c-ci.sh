@@ -19,14 +19,15 @@ function ci() {
      output=$(./scripts/w3c.sh "$file")
 
      if grep -qE "error" <<< "$output"; then
-       errors+=("$file: \n$output\n\n")
+       errors+=("$file: \n$output\n")
      elif grep -qE "warning" <<< "$output"; then
-       warnings+=("$file: \n$output\n\n")
+       warnings+=("$file: \n$output\n")
      fi
   done
 
-  echo "${errors[@]}"
-  echo "${warnings[@]}"
+  echo -e "\n"
+  echo -e "${errors[@]}"
+  echo -e "${warnings[@]}"
 
   if [ ${#errors[@]} -eq 0 ]; then
     exit 0
