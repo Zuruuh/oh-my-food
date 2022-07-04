@@ -2,13 +2,13 @@ name: Lint styles & scripts
 on: [ push, pull_request ]
 
 jobs:
-  lint:
+  lint-source:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js environment ✅
         uses: actions/setup-node@v3.3.0
         with:
           node-version: 16
@@ -19,17 +19,42 @@ jobs:
           version: 7.1.6
 
       - name: Install dependencies 🔧
-        run: |
-          pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Run eslint ✨
-        run: |
-          node_modules/eslint/bin/eslint.js ./
+        run: node_modules/eslint/bin/eslint.js ./
 
       - name: Run prettier ✨
-        run: |
-          node_modules/prettier/bin-prettier.js -c ./
+        run: node_modules/prettier/bin-prettier.js -c ./
 
       - name: Run stylelint ✨
+        run: node_modules/stylelint/bin/stylelint.js ./**/*.scss
+
+  lint-dist:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment ✅
+        uses: actions/setup-node@v3.3.0
+        with:
+          node-version: 16
+
+      - name: Setup pnpm 📦
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.1.6
+
+      - name: Install and Build 🔧
         run: |
-          node_modules/stylelint/bin/stylelint.js ./**/*.scss
+          pnpm install --frozen-lockfile
+          pnpm run prod /oh-my-food/
+
+      - name: Additional post-build scripts 🤖
+        run: |
+          ./scripts/fs-router.sh dist
+
+      - name: Run w3c validator ✨
+        continue-on-error: true # Lint will not fail entire ci even if exit return code is 1 (since there are some errors we cannot solve *for now*)
+        run: bash ./scripts/w3c-ci.sh dist

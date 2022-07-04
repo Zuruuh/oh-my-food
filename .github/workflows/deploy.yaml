@@ -24,8 +24,7 @@ jobs:
 
       - name: Additional post-build scripts 🤖
         run: |
-          ./scripts/prod.sh
-          ./scripts/fs-router.sh
+          ./scripts/fs-router.sh dist
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
