@@ -1,8 +1,7 @@
 // @ts-check
-/// <reference path="./typings/postcss.d">
 
 /**
- * @type {Partial<PostCSSConfig>}
+ * @type {Partial<import('postcss-load-config').Config>}
  */
 const PostCSSConfig = {
   plugins: [
