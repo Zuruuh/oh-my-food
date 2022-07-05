@@ -46,3 +46,9 @@ header.layout {
     }
   }
 }
+
+@include desktop {
+  header.layout .hero a.button {
+    font-size: 2rem;
+  }
+}

@@ -9,6 +9,7 @@
   }
 
   .restaurants {
+    max-width: max(90rem, 90vw);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
@@ -19,6 +20,7 @@
 @include tablet {
   #restaurants {
     .restaurants {
+      margin: 0 auto;
       grid-template-columns: repeat(2, 1fr);
     }
   }

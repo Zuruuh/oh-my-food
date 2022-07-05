@@ -35,7 +35,7 @@ main#restaurant {
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
       position: absolute;
-      bottom: 100%;
+      bottom: 99.5%;
 
       h3 {
         font-family: Shrikhand, sans-serif;
@@ -163,6 +163,7 @@ main#restaurant {
 
   button.button.order {
     font-family: Roboto, sans-serif;
+    margin: 2.5rem 0;
   }
 }
 
