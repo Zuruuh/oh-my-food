@@ -27,26 +27,30 @@
     object-fit: cover;
   }
 
-  & > .card-info {
-    background-color: inherit;
+  & .card-info {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     position: relative;
 
-    & > .card-text {
+    & .card-text {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
 
-      & > b {
+      & b {
         font-weight: 800;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-top: 0.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      & span {
+        font-size: 1.2rem;
       }
     }
 
-    & > .card-rating {
+    & .card-rating {
       right: 0.5rem;
       height: 2.4rem;
       width: 2.4rem;

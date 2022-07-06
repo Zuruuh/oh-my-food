@@ -4,7 +4,7 @@ main#restaurant {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: $bg-light-secondary;
+  background-color: $bg-light-primary;
 
   & > img {
     width: 100%;
@@ -15,7 +15,7 @@ main#restaurant {
 
   section.menu {
     position: relative;
-    background-color: $bg-light-primary;
+    background-color: $bg-light-secondary;
     max-width: 70rem;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ main#restaurant {
     }
 
     header {
-      background-color: $bg-light-primary;
+      background-color: $bg-light-secondary;
       display: flex;
       justify-content: space-between;
       padding: 1.5rem 2rem 1.5rem 1rem;
@@ -74,11 +74,12 @@ main#restaurant {
           animation-name: fade-in-from-bottom;
           animation-duration: 1.25s;
           animation-fill-mode: forwards; // https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
+          background-color: $bg-light-primary;
           height: 7rem;
           display: flex;
           align-items: flex-end;
           padding: 1.25rem 1rem;
-          margin-top: 0.5rem;
+          margin-top: 1rem;
 
           .menu-info {
             flex-grow: 1;
