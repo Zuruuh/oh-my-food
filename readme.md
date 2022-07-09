@@ -23,8 +23,7 @@ If for some reason you need to build the project locally, here are the steps you
 
 ```shell
 pnpm run prod /oh-my-food/ # This will build all assets in the *dist* folder using vitejs and parcel config
-bash ./scripts/prod.sh # This will update the built files to make sure we won't have a /pages/ prefix on prod
-bash ./scripts/fs-router.sh # This will ensure all the links and urls in our apps won't end with ".html"
+bash ./scripts/fs-router.sh # This will ensure the built files won't have a /pages/ prefix on prod & updates all the links and urls in our apps so they won't end with ".html"
 ```
 
 And your _dist_ folder should be good to go.
