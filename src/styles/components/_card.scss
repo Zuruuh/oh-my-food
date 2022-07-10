@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
   position: relative;
 
-  &.new::after {
+  .new::after {
     content: 'Nouveau';
     position: absolute;
     top: 1rem;
@@ -19,7 +19,7 @@
     border-radius: 0.25rem;
   }
 
-  & > img {
+  > img {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     width: 100%;
@@ -27,30 +27,31 @@
     object-fit: cover;
   }
 
-  & .card-info {
+  .card-info {
     padding: 1rem;
+    padding-top: 0.2rem;
     display: flex;
     justify-content: space-between;
     position: relative;
 
-    & .card-text {
+    .card-text {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
 
-      & b {
+      b {
         font-weight: 800;
         font-size: 1.5rem;
         margin-top: 0.2rem;
         margin-bottom: 0.5rem;
       }
 
-      & span {
+      span {
         font-size: 1.2rem;
       }
     }
 
-    & .card-rating {
+    .card-rating {
       right: 0.5rem;
       height: 2.4rem;
       width: 2.4rem;

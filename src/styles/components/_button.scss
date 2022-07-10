@@ -10,6 +10,7 @@ button.button {
   box-shadow: 0 5px 20px -10px #000;
   border: 0;
   transition: filter ease-out 0.1s, scale ease-in 0.05s;
+  cursor: pointer;
 
   &:hover {
     filter: brightness(105%);
